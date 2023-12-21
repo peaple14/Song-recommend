@@ -1,9 +1,8 @@
-import 'dart:io';
-
 import 'package:flutter/material.dart';
 import 'package:flutter_sound/flutter_sound.dart';
 import 'package:http/http.dart' as http;
 import 'package:path_provider/path_provider.dart';
+
 
 void main() {
   runApp(MyApp());
@@ -13,7 +12,10 @@ class MyApp extends StatelessWidget {
   @override
   Widget build(BuildContext context) {
     return MaterialApp(
-      title: 'Flutter Sound Example',
+      title: 'Flutter Sound Demo',
+      theme: ThemeData(
+        primarySwatch: Colors.blue,
+      ),
       home: MyHomePage(),
     );
   }
@@ -28,75 +30,68 @@ class _MyHomePageState extends State<MyHomePage> {
   late FlutterSoundPlayer _player;
   late FlutterSoundRecorder _recorder;
   bool _isRecording = false;
-  late String _recordedFilePath;
+  bool _isPlaying = false;
 
   @override
   void initState() {
     super.initState();
     _player = FlutterSoundPlayer();
     _recorder = FlutterSoundRecorder();
-    _recorder.openAudioSession();
   }
 
+  // 녹음 시작
   Future<void> _startRecording() async {
     try {
-      String path = await _getAudioFilePath();
+      await _recorder.openRecorder();
       await _recorder.startRecorder(
-        toFile: path,
-        codec: Codec.aacMP4,
+        toFile: 'example.aac',
+        codec: Codec.aacADTS,
       );
       setState(() {
         _isRecording = true;
-        _recordedFilePath = path;
       });
-    } catch (e) {
-      print('Error starting recording: $e');
+    } catch (err) {
+      print('Error: $err');
     }
   }
 
+  // 녹음 중지
   Future<void> _stopRecording() async {
-    try {
-      await _recorder.stopRecorder();
-      setState(() {
-        _isRecording = false;
-      });
-    } catch (e) {
-      print('Error stopping recording: $e');
-    }
+    await _recorder.stopRecorder();
+    await _recorder.closeRecorder();
+    setState(() {
+      _isRecording = false;
+    });
   }
 
-  Future<void> _uploadAudioFile(String filePath) async {
-    try {
-      File file = File(filePath);
-      var request = http.MultipartRequest('POST', Uri.parse('http://example.com/upload'));
-      request.files.add(await http.MultipartFile.fromPath('audio', file.path));
-      var response = await request.send();
-      print('Server response: ${response.statusCode}');
-    } catch (e) {
-      print('Error uploading audio file: $e');
-    }
+  // 재생 시작
+  Future<void> _startPlaying() async {
+    await _player.startPlayer(
+      fromURI: 'example.aac',
+      codec: Codec.aacADTS,
+      whenFinished: () {
+        setState(() {
+          _isPlaying = false;
+        });
+      },
+    );
+    setState(() {
+      _isPlaying = true;
+    });
   }
 
-  Future<void> _sendToServer() async {
-    if (_recordedFilePath != null) {
-      await _uploadAudioFile(_recordedFilePath);
-      // 삭제할 때 에러가 나면 무시하도록 try-catch
-      try {
-        await File(_recordedFilePath).delete();
-      } catch (e) {
-        print('Error deleting file: $e');
-      }
-    }
-  }
-
-  Future<String> _getAudioFilePath() async {
-    Directory appDir = await getApplicationDocumentsDirectory();
-    return '${appDir.path}/audio_recording.aac';
+  // 재생 중지
+  Future<void> _stopPlaying() async {
+    await _player.stopPlayer();
+    setState(() {
+      _isPlaying = false;
+    });
   }
 
   @override
   void dispose() {
-    _recorder.closeAudioSession();
+    _player.closePlayer();
+    _recorder.closeRecorder();
     super.dispose();
   }
 
@@ -104,26 +99,33 @@ class _MyHomePageState extends State<MyHomePage> {
   Widget build(BuildContext context) {
     return Scaffold(
       appBar: AppBar(
-        title: Text('Flutter Sound Example'),
+        title: Text('Flutter Sound Demo'),
       ),
       body: Center(
         child: Column(
           mainAxisAlignment: MainAxisAlignment.center,
           children: <Widget>[
-            _isRecording
-                ? ElevatedButton(
-              onPressed: _stopRecording,
-              child: Text('Stop Recording'),
-            )
-                : ElevatedButton(
-              onPressed: _startRecording,
-              child: Text('Start Recording'),
-            ),
+            if (_isRecording)
+              ElevatedButton(
+                onPressed: _stopRecording,
+                child: Text('Stop Recording'),
+              )
+            else
+              ElevatedButton(
+                onPressed: _startRecording,
+                child: Text('Start Recording'),
+              ),
             SizedBox(height: 16),
-            ElevatedButton(
-              onPressed: _sendToServer,
-              child: Text('Send to Server'),
-            ),
+            if (_isPlaying)
+              ElevatedButton(
+                onPressed: _stopPlaying,
+                child: Text('Stop Playing'),
+              )
+            else
+              ElevatedButton(
+                onPressed: _startPlaying,
+                child: Text('Start Playing'),
+              ),
           ],
         ),
       ),
