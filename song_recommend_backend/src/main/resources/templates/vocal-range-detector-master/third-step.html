@@ -1,17 +1,17 @@
 <!DOCTYPE html>
-<html>
-  <head>
-    <link rel="stylesheet" href="style.css">
+<html xmlns:th="http://www.thymeleaf.org">
+<head>
+    <link rel="stylesheet" th:href="@{/css/style.css}"/>
     <title>Third Step</title>
-  <head>
-  <h2>Third Step: Sing Lower</h2>
-  <body>
-    <p>Sing from your base note to the bottom of your vocal range.</p>
-    <button id="recordbutton">Record</button>
-    <button id="play">Play Note</button>
-  </body>
-  <script src="yin.js"></script>
-  <script src="audio-processor.js"></script>
-  <script src="renderer.js"></script>
-  <script src="scales.js"></script>
+</head>
+<h2>Third Step: Sing Lower</h2>
+<body>
+<p>Sing from your base note to the bottom of your vocal range.</p>
+<button id="recordbutton">Record</button>
+<button id="play">Play Note</button>
+</body>
+<script th:src="@{/js/yin.js}"></script>
+<script th:src="@{/js/audio-processor.js}"></script>
+<script th:src="@{/js/renderer.js}"></script>
+<script th:src="@{/js/scales.js}"></script>
 </html>
