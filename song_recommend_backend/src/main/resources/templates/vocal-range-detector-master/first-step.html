@@ -15,9 +15,10 @@
 <script th:src="@{/js/audio-processor.js}" type="text/javascript"></script>
 <script th:src="@{/js/results.js}" type="text/javascript"></script>
 <script type="text/javascript">
-    var currentLocation = window.location.pathname;
-    if (currentLocation == "/first-step") {
-        console.log("The current location is not '/aadda'.");
+    if (window.location.pathname === "/first-step") { // 현재 페이지가 '/first-step'인지 확인
+        console.log("The current location is '/first-step'.");
+    } else {
+        console.log("The current location is not '/first-step'.");
     }
 </script>
 </html>

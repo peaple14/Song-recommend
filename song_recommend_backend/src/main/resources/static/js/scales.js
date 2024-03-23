@@ -7,7 +7,8 @@ body.insertBefore(text, body.childNodes[3]); // p 요소를 body 요소의 자�
 let upNotes = ["A", "A#", "B", "C", "C#", "D", "D#", "E", "F", "F#", "G", "G#"]; // 상향 음표 배열
 let downNotes = ["G#", "G", "F#", "F", "E", "D#", "D", "C#", "C", "B", "A#", "A"]; // 하향 음표 배열
 let baseIndex; // 기준 음표 인덱스
-if (fileName[0] == "second-step.html") {
+if (window.location.pathname === "/second-step") {
+  console.log("여기가 문제 맞음.")
   baseIndex = upNotes.findIndex(element => {
     return element === base.substring(0, base.length - 1);
   });
@@ -25,7 +26,7 @@ let prevNote = note; // 이전 음계 이름 설정
 
 function nextNote() {
   prevNote = note; // 이전 음표 업데이트
-  if (fileName[0] == "second-step.html") { // 두 번째 단계인 경우
+  if (window.location.pathname === "/second-step") { // 두 번째 단계인 경우
     note = upNotes[(baseIndex + i) % 12]; // 상향 음표 배열에서 다음 음표 가져오기
     if (note === "C") {
       octaveNumber++; // 다음 옥타브로 이동
@@ -64,13 +65,35 @@ function fail() {
   let text = document.createElement("p"); // p 요소 생성
   let node;
 
-  if (fileName[0] === "second-step.html") { // 두 번째 단계인 경우
+  if (window.location.pathname === "/second-step") { // 두 번째 단계인 경우
     localStorage.setItem('highNote', prevNote + prevOctave); // 최고 음표를 로컬 스토리지에 저장
-    next.setAttribute("onclick", "location.href = 'third-step.html'"); // 다음 단계로 이동하는 onclick 이벤트 설정
+    next.setAttribute("onclick", "window.location.href = '/third-step'");//3단계로
     node = document.createTextNode("Your highest note is " + prevNote + prevOctave + "."); // 텍스트 노드 생성
   } else { // 두 번째 단계가 아닌 경우
-    localStorage.setItem('lowNote', prevNote + prevOctave); // 최저 음표를 로컬 스토리지에 저장
-    next.setAttribute("onclick", "location.href = 'results.html'"); // 결과 페이지로 이동하는 onclick 이벤트 설정
+
+    // localStorage.setItem('lowNote', prevNote + prevOctave); // 최저 음표를 로컬 스토리지에 저장
+
+    // 서버로 최저 음표 전송
+    fetch('/save-low-note', {
+      method: 'POST',
+      headers: {
+        'Content-Type': 'application/json'
+      },
+      body: JSON.stringify({ lowNote: prevNote + prevOctave }) // 최저 음표 데이터를 JSON 형식으로 변환하여 전송
+    })
+        .then(response => {
+          if (!response.ok) {
+            throw new Error('네트워크 에러');
+          }
+          console.log('Low note 저장 완료.');
+        })
+        .catch(error => {
+          console.error('There was an error with the fetch operation:', error);
+        });
+
+
+
+    next.setAttribute("onclick", "window.location.href = '/results'");//결과페이지로
     node = document.createTextNode("Your lowest note is " + prevNote + prevOctave + "."); // 텍스트 노드 생성
   }
 

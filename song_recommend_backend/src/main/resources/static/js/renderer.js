@@ -1,19 +1,17 @@
 const audioContext = new AudioContext(); //오디오 컨텍스트 생성
 
-let mediaRecorder; //미디어 레코더 객체
-let sourceStream; //소스 스트림 객체
+let mediaRecorder; //미디어 레코더 객체 ->여기서만쓰니 패스
+let sourceStream; //소스 스트림 객체 ->여기서만씀
 let refreshHandle; //업데이트 핸들 객체
 let noteArray = []; //음표 배열
 
 let body = document.querySelector("body"); //body 요소 선택용
-let fileName = location.href.split("/").slice(-1); //현재파일이름추출(주소값 추출인데 나중에 수정)
-
 let recordbutton = document.getElementById("recordbutton"); //녹음 버튼 요소 선택
 recordbutton.onclick = () => { //녹음버튼 클릭 event handler
   getMedia(); //미디어 가져오기 함수
   recordbutton.innerHTML = "Recording"; //녹음중 텍스트변경(녹음되고 있다고)
   recordbutton.disabled = true;  //녹음버튼 비활성화(녹음중 안되게)
-  if (fileName[0] != "first-step.html") { //현재파일이 이게 아닐경우(현재 주소가 아니게 될때로 변경해야함)
+  if (window.location.pathname === "/first-step") { //현재파일이 이게 아닐경우(현재 주소가 아니게 될때로 변경해야함)
       play.disabled = true;//재생버튼 활성
   }
 };
@@ -35,9 +33,10 @@ async function getMedia() { //미디어 가져오기 함수
     alert("Please enable your microphone.");//마이크 활성화하라고 경고창
     recordbutton.innerHTML = "Record";//녹음중 다시 record로 변경
     recordbutton.disabled = false;//녹음버튼 활성화
-    if (fileName[0] != "first-step.html") {//만약 first-step.html파일이 아닐때(현재 주소가 아닐때)
-        play.disabled = false; //재생버튼 활성화
+    if (window.location.pathname !== "/first-step") { // 만약 현재 주소가 "/first-step.html"이 아닐 때
+      play.disabled = false; // 재생버튼 비활성화
     }
+
   };
 }
 
@@ -70,25 +69,19 @@ function stop () {//오디오 녹음 중지 함수
   body.append(text);// body에 요소 추가
   recordbutton.innerHTML = "Record";// 녹음 버튼 텍스트 변경
   recordbutton.disabled = false;// 녹음 버튼 활성화
-  if (fileName[0] != "first-step.html") {// 현재 파일이 "first-step.html"이 아닌 경우(주소로 변경 해야함)
+  if (window.location.pathname !== "/first-step") {// 현재 파일이 "first-step.html"이 아닌 경우(주소로 변경 해야함)
     play.disabled = false;// 재생 버튼 활성화
   }
 }
 
-/**
- * Handles data received from a `MediaRecorder`.
- * @param {BlobEvent} e Blob event from the `MediaRecorder`.
- */
+
 async function update (e) {// 업데이트 함수
   if (e.data.size !== 0) {// 레코딩 데이터가 있는 경우
     await process(e.data);// 데이터 처리 함수 호출
   }
 }
 
-/**
- * Sends audio data to the audio processing worker.
- * @param {Blob} data The blob containing the recorded audio data.
- */
+
 async function process (data) {// 데이터 처리 함수
   // Load the blob.
   const response = await fetch(URL.createObjectURL(data));// Blob 데이터 로드
@@ -103,8 +96,33 @@ async function process (data) {// 데이터 처리 함수
   if (noteArray.length == 2) {// 음표 배열의 길이가 2인 경우
     stop();// 녹음 중지
     let note = noteArray[0];    // 첫 번째 음표 추출
-    if (fileName[0] == "first-step.html") {// 현재 파일이 "first-step.html"인 경우(주소로 변경)
-      localStorage.setItem("baseNote", note);// 로컬 스토리지에 기준 음표 저장
+    if (window.location.pathname === "/first-step") {// 현재 파일이 "first-step.html"인 경우(주소로 변경)
+      await saveBaseNoteToServer(note);
+
+      // localStorage.setItem("baseNote", note);// 로컬 스토리지에 기준 음표 저장(여기 바꿔야한다@@@@)
+
+      async function saveBaseNoteToServer(note) {
+        const formData = new FormData();
+        formData.append('baseNote', note); // 기준 음표를 FormData에 추가
+
+        try {
+          const response = await fetch('/save-base-note', { // 서버에 기준 음표 저장 요청 보내기
+            method: 'POST',
+            body: formData
+          });
+          if (!response.ok) {
+            throw new Error('Network response was not ok');
+          }
+          const result = await response.text();
+          console.log(result); // 서버로부터의 응답 출력
+        } catch (error) {
+          console.error('There was an error with the fetch operation:', error);
+        }
+      }
+
+
+
+
       let text = document.createElement("p");// 새 p 요소 생성
       let node = document.createTextNode("Your base note is " + note + ".");// 텍스트 노드 생성
       text.append(node);// 텍스트 노드 추가
@@ -112,7 +130,7 @@ async function process (data) {// 데이터 처리 함수
 
       let button = document.createElement("BUTTON");// 새 버튼 요소 생성
       button.innerHTML = "Next Step";// 버튼 텍스트 설정
-      button.setAttribute("onclick", "location.href = 'second-step.html'");// 버튼 클릭 이벤트 설정
+      button.setAttribute("onclick", "window.location.href = '/second-step'");
       body.append(button); // body에 버튼 추가
     } else {// 현재 파일 이름이 "first-step.html"이 아닌 경우 -> 또 주소로 변경 해야함
       let text = document.createElement("p");// 새 p 요소 생성

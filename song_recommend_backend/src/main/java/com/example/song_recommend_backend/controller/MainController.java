@@ -18,13 +18,20 @@ public class MainController {
         return "/vocal-range-detector-master/first-step";
     }
 
-//    @GetMapping("/first-step")
-//    public String result() {
-//        return "/vocal-range-detector-master/result";
-//    }
-//
-//    @GetMapping("/first-step")
-//    public String test() {
-//        return "/vocal-range-detector-master/first-step";
-//    }
+    @GetMapping("/second-step")
+    public String second() {
+        return "/vocal-range-detector-master/second-step";
+    }
+
+    @GetMapping("/third-step")
+    public String third() {
+        return "/vocal-range-detector-master/third-step";
+    }
+
+    @GetMapping("/result")
+    public String result() {
+        return "/vocal-range-detector-master/results";
+    }
+
+
 }
