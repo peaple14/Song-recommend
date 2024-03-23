@@ -12,7 +12,6 @@ public class MainController {
         return "/vocal-range-detector-master/index";
     }
 
-
     @GetMapping("/first-step")
     public String first() {
         return "/vocal-range-detector-master/first-step";
@@ -32,6 +31,4 @@ public class MainController {
     public String result() {
         return "/vocal-range-detector-master/results";
     }
-
-
 }
