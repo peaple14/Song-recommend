@@ -73,11 +73,11 @@ function fail() {
 
   if (window.location.pathname == "/second-step") { // 두 번째 단계인 경우
     localStorage.setItem('highNote', prevNote + prevOctave); // 최고 음표를 로컬 스토리지에 저장
-    next.setAttribute("onclick", "location.href = 'third-step.html'"); // 다음 단계로 이동하는 onclick 이벤트 설정
+    next.setAttribute("onclick", "location.href = 'third-step'"); // 다음 단계로 이동하는 onclick 이벤트 설정
     node = document.createTextNode("Your highest note is " + prevNote + prevOctave + "."); // 텍스트 노드 생성
   } else { // 두 번째 단계가 아닌 경우
     localStorage.setItem('lowNote', prevNote + prevOctave); // 최저 음표를 로컬 스토리지에 저장
-    next.setAttribute("onclick", "location.href = 'results.html'"); // 결과 페이지로 이동하는 onclick 이벤트 설정
+    next.setAttribute("onclick", "location.href = 'results'"); // 결과 페이지로 이동하는 onclick 이벤트 설정
     node = document.createTextNode("Your lowest note is " + prevNote + prevOctave + "."); // 텍스트 노드 생성
   }
 

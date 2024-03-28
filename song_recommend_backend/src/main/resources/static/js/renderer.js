@@ -12,10 +12,10 @@ recordbutton.onclick = () => { // 녹음 버튼 클릭 event handler
   console.log("눌렀음")
   getMedia().then(() => {
     // 미디어 가져오기가 성공한 후에 실행할 코드를 작성합니다.
-    console.log("성공")
+    console.log("getMedia 성공")
   }).catch(error => {
     // 미디어 가져오기가 실패한 경우에 대한 오류 처리를 수행합니다.
-    console.log("실패")
+    console.log("getMedia 실패")
   });  recordbutton.innerHTML = "Recording"; // 녹음 중 텍스트 변경(녹음되고 있다고)
   recordbutton.disabled = true;  // 녹음 버튼 비활성화(녹음 중 안되게)
   if (window.location.pathname !== "/first-step") { // 현재 파일이 이게 아닐 경우(현재 주소가 아니게 될 때로 변경해야 함)
@@ -120,7 +120,7 @@ async function process(data) { // 데이터 처리 함수
 
       let button = document.createElement("BUTTON"); // 새 버튼 요소 생성
       button.innerHTML = "Next Step"; // 버튼 텍스트 설정
-      button.setAttribute("onclick", "location.href = 'second-step.html'"); // 버튼 클릭 이벤트 설정
+      button.setAttribute("onclick", "location.href = 'second-step'"); // 버튼 클릭 이벤트 설정
       body.append(button); // body에 버튼 추가
     } else { // 현재 파일 이름이 "first-step.html"이 아닌 경우 -> 또 주소로 변경 해야함
       let text = document.createElement("p"); // 새 p 요소 생성
