@@ -6,6 +6,7 @@
 const keysSharp = ['C', 'C#', 'D', 'D#', 'E', 'F', 'F#', 'G', 'G#', 'A', 'A#', 'B'];
 const keysFlat = ['C', 'Db', 'D', 'Eb', 'E', 'F', 'Gb', 'G', 'Ab', 'A', 'Bb', 'B'];
 
+
 // Lookup table for steps, used to convert a key (e.g. `F#5`) to a frequency.
 // 음계를 주파수로 변경하기전 조회용 const
 const steps = {

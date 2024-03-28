@@ -12,19 +12,27 @@ public class MainController {
         return "/vocal-range-detector-master/index";
     }
 
-
     @GetMapping("/first-step")
     public String first() {
+        System.out.println("1페이지");
         return "/vocal-range-detector-master/first-step";
     }
 
-//    @GetMapping("/first-step")
-//    public String result() {
-//        return "/vocal-range-detector-master/result";
-//    }
-//
-//    @GetMapping("/first-step")
-//    public String test() {
-//        return "/vocal-range-detector-master/first-step";
-//    }
+    @GetMapping("/second-step")
+    public String second() {
+        System.out.println("2페이지");
+        return "/vocal-range-detector-master/second-step";
+    }
+
+    @GetMapping("/third-step")
+    public String third() {
+        System.out.println("3페이지");
+        return "/vocal-range-detector-master/third-step";
+    }
+
+    @GetMapping("/result")
+    public String result() {
+        System.out.println("결과값");
+        return "/vocal-range-detector-master/results";
+    }
 }
