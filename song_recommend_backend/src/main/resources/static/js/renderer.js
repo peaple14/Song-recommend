@@ -55,12 +55,12 @@ function listen () { // 오디오 녹음용 함수
 
   mediaRecorder.ondataavailable = update; // 레코딩 데이터가 가능할 시 update 함수 호출
 
-  // Every 500ms, send whatever has been recorded to the audio processor.
+  // Every 250ms, send whatever has been recorded to the audio processor.
   // This can't be done with `mediaRecorder.start(ms)` because the
   // `AudioContext` may fail to decode the audio data when sent in parts.
   refreshHandle = setInterval(() => { // 주기적으로 실행되는 업데이트 핸들러
     mediaRecorder.start(); // 레코딩 시작
-    setTimeout(() => mediaRecorder.stop(), 500); // 500ms 후에 레코딩 중지
+    setTimeout(() => mediaRecorder.stop(), 250); // 250ms 후에 레코딩 중지
   }, 1000); // 1초 간격으로 실행
 }
 
@@ -71,6 +71,7 @@ function stop () { // 오디오 녹음 중지 함수
   clearInterval(refreshHandle); // 업데이트 핸들러 종료
   let text = document.createElement("p"); // 새 p 요소 생성
   let node = document.createTextNode("Recording Complete."); // 텍스트 노드 생성
+  console.log("완료노드 되도록.")
   text.setAttribute("id", "complete"); // id 속성 설정
   text.append(node); // 텍스트 노드 추가
   body.append(text); // body에 요소 추가
@@ -91,8 +92,6 @@ async function update (e) { // 업데이트 함수
   }
 }
 
-
-
 /**
  * Sends audio data to the audio processing worker.
  * @param {Blob} data The blob containing the recorded audio data.
@@ -111,7 +110,8 @@ async function process(data) { // 데이터 처리 함수
   if (noteArray.length == 2) { // 음표 배열의 길이가 2인 경우
     stop(); // 녹음 중지
     let note = noteArray[0]; // 첫 번째 음표 추출
-    if (window.location.pathname !== "/first-step") { // 현재 파일이 "first-step.html"인 경우(주소로 변경)
+    if (window.location.pathname == "/first-step") { // 현재 파일이 "first-step.html"인 경우(주소로 변경)
+      console.log("여기까진됨.")
       sessionStorage.setItem("baseNote", note); // 세션 스토리지에 기준 음표 저장
       let text = document.createElement("p"); // 새 p 요소 생성
       let node = document.createTextNode("Your base note is " + note + "."); // 텍스트 노드 생성
