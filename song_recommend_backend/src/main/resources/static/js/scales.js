@@ -1,5 +1,5 @@
 // 서버에서 기준 음표 가져오기
-let base;
+let base = sessionStorage.getItem('baseNote');
 // 서버에서 기준 음표 가져오는 코드 추가
 
 let text = document.createElement("p"); // p 요소 생성
@@ -10,7 +10,7 @@ body.insertBefore(text, body.childNodes[3]); // p 요소를 body 요소의 자�
 let upNotes = ["A", "A#", "B", "C", "C#", "D", "D#", "E", "F", "F#", "G", "G#"]; // 상향 음표 배열
 let downNotes = ["G#", "G", "F#", "F", "E", "D#", "D", "C#", "C", "B", "A#", "A"]; // 하향 음표 배열
 let baseIndex; // 기준 음표 인덱스
-if (window.location.pathname !== "/second-step") {
+if (window.location.pathname == "/second-step") {
   baseIndex = upNotes.findIndex(element => {
     return element === base.substring(0, base.length - 1);
   });
@@ -72,11 +72,11 @@ function fail() {
   let node;
 
   if (window.location.pathname == "/second-step") { // 두 번째 단계인 경우
-    localStorage.setItem('highNote', prevNote + prevOctave); // 최고 음표를 로컬 스토리지에 저장
+    sessionStorage.setItem('highNote', prevNote + prevOctave); // 최고 음표를 세션 스토리지에 저장
     next.setAttribute("onclick", "location.href = 'third-step'"); // 다음 단계로 이동하는 onclick 이벤트 설정
     node = document.createTextNode("Your highest note is " + prevNote + prevOctave + "."); // 텍스트 노드 생성
   } else { // 두 번째 단계가 아닌 경우
-    localStorage.setItem('lowNote', prevNote + prevOctave); // 최저 음표를 로컬 스토리지에 저장
+    sessionStorage.setItem('lowNote', prevNote + prevOctave); // 최저 음표를 세션 스토리지에 저장
     next.setAttribute("onclick", "location.href = 'results'"); // 결과 페이지로 이동하는 onclick 이벤트 설정
     node = document.createTextNode("Your lowest note is " + prevNote + prevOctave + "."); // 텍스트 노드 생성
   }

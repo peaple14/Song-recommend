@@ -61,7 +61,7 @@ function listen () { // 오디오 녹음용 함수
   refreshHandle = setInterval(() => { // 주기적으로 실행되는 업데이트 핸들러
     mediaRecorder.start(); // 레코딩 시작
     setTimeout(() => mediaRecorder.stop(), 250); // 250ms 후에 레코딩 중지
-  }, 1000); // 1초 간격으로 실행
+  }, 500); // 0.5초 간격으로 실행
 }
 
 /**
@@ -112,7 +112,7 @@ async function process(data) { // 데이터 처리 함수
     let note = noteArray[0]; // 첫 번째 음표 추출
     if (window.location.pathname == "/first-step") { // 현재 파일이 "first-step.html"인 경우(주소로 변경)
       console.log("여기까진됨.")
-      sessionStorage.setItem("baseNote", note); // 세션 스토리지에 기준 음표 저장
+      sessionStorage.setItem("baseNote", note); // 세션 스토리지에 기준 음표 저장(됨)
       let text = document.createElement("p"); // 새 p 요소 생성
       let node = document.createTextNode("Your base note is " + note + "."); // 텍스트 노드 생성
       text.append(node); // 텍스트 노드 추가
