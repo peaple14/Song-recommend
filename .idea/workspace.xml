@@ -1,35 +1,7 @@
 <?xml version="1.0" encoding="UTF-8"?>
 <project version="4">
   <component name="ChangeListManager">
-    <list default="true" id="1187508e-c248-4408-8921-9f7795244d33" name="변경" comment="">
-      <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/song_recommend_backend/.gitignore" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/song_recommend_backend/build.gradle" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/song_recommend_backend/gradle/wrapper/gradle-wrapper.jar" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/song_recommend_backend/gradle/wrapper/gradle-wrapper.properties" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/song_recommend_backend/gradlew" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/song_recommend_backend/gradlew.bat" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/song_recommend_backend/settings.gradle" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/song_recommend_backend/src/main/java/com/example/song_recommend_backend/SongRecommendBackendApplication.java" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/song_recommend_backend/src/main/java/com/example/song_recommend_backend/controller/MainController.java" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/song_recommend_backend/src/main/resources/application.properties" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/song_recommend_backend/src/main/resources/static/css/style.css" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/song_recommend_backend/src/main/resources/static/js/audio-processor.js" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/song_recommend_backend/src/main/resources/static/js/renderer.js" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/song_recommend_backend/src/main/resources/static/js/results.js" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/song_recommend_backend/src/main/resources/static/js/scales.js" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/song_recommend_backend/src/main/resources/static/js/yin.js" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/song_recommend_backend/src/main/resources/templates/vocal-range-detector-master/LICENSE.md" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/song_recommend_backend/src/main/resources/templates/vocal-range-detector-master/README.md" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/song_recommend_backend/src/main/resources/templates/vocal-range-detector-master/first-step.html" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/song_recommend_backend/src/main/resources/templates/vocal-range-detector-master/index.html" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/song_recommend_backend/src/main/resources/templates/vocal-range-detector-master/results.html" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/song_recommend_backend/src/main/resources/templates/vocal-range-detector-master/second-step.html" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/song_recommend_backend/src/main/resources/templates/vocal-range-detector-master/third-step.html" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/song_recommend_backend/src/test/java/com/example/song_recommend_backend/SongRecommendBackendApplicationTests.java" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/song_recommend_backend/목표.txt" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/song_recommend_backend/설계1차.png" beforeDir="false" />
-    </list>
+    <list default="true" id="1187508e-c248-4408-8921-9f7795244d33" name="변경" comment="" />
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
     <option name="HIGHLIGHT_NON_ACTIVE_CHANGELIST" value="false" />
@@ -45,20 +17,20 @@
   <component name="ProjectViewState">
     <option name="showLibraryContents" value="true" />
   </component>
-  <component name="PropertiesComponent">{
-  &quot;keyToString&quot;: {
-    &quot;RunOnceActivity.OpenProjectViewOnStart&quot;: &quot;true&quot;,
-    &quot;RunOnceActivity.ShowReadmeOnStart&quot;: &quot;true&quot;,
-    &quot;WebServerToolWindowFactoryState&quot;: &quot;false&quot;,
-    &quot;ignore.virus.scanning.warn.message&quot;: &quot;true&quot;,
-    &quot;last_opened_file_path&quot;: &quot;C:/coding/Song-recommend/song-recommend&quot;,
-    &quot;nodejs_package_manager_path&quot;: &quot;npm&quot;,
-    &quot;project.structure.last.edited&quot;: &quot;프로젝트&quot;,
-    &quot;project.structure.proportion&quot;: &quot;0.0&quot;,
-    &quot;project.structure.side.proportion&quot;: &quot;0.0&quot;,
-    &quot;vue.rearranger.settings.migration&quot;: &quot;true&quot;
+  <component name="PropertiesComponent"><![CDATA[{
+  "keyToString": {
+    "RunOnceActivity.OpenProjectViewOnStart": "true",
+    "RunOnceActivity.ShowReadmeOnStart": "true",
+    "WebServerToolWindowFactoryState": "false",
+    "ignore.virus.scanning.warn.message": "true",
+    "last_opened_file_path": "C:/coding/Song-recommend/song_recommend_backend",
+    "nodejs_package_manager_path": "npm",
+    "project.structure.last.edited": "프로젝트",
+    "project.structure.proportion": "0.0",
+    "project.structure.side.proportion": "0.0",
+    "vue.rearranger.settings.migration": "true"
   }
-}</component>
+}]]></component>
   <component name="RunManager">
     <configuration default="true" type="DjangoTestsConfigurationType">
       <module name="song_recommend_backend" />
@@ -167,6 +139,7 @@
       <workItem from="1712792972564" duration="14000" />
       <workItem from="1712796400097" duration="32000" />
       <workItem from="1712796761006" duration="14000" />
+      <workItem from="1712797298724" duration="50000" />
     </task>
     <servers />
   </component>
