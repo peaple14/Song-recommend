@@ -2,9 +2,7 @@
 <project version="4">
   <component name="ChangeListManager">
     <list default="true" id="1187508e-c248-4408-8921-9f7795244d33" name="변경" comment="">
-      <change beforePath="$PROJECT_DIR$/.idea/.gitignore" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/.idea/modules.xml" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/.idea/vcs.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/vcs.xml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/song_recommend_backend/.gitignore" beforeDir="false" />
       <change beforePath="$PROJECT_DIR$/song_recommend_backend/build.gradle" beforeDir="false" />
       <change beforePath="$PROJECT_DIR$/song_recommend_backend/gradle/wrapper/gradle-wrapper.jar" beforeDir="false" />
@@ -12,69 +10,25 @@
       <change beforePath="$PROJECT_DIR$/song_recommend_backend/gradlew" beforeDir="false" />
       <change beforePath="$PROJECT_DIR$/song_recommend_backend/gradlew.bat" beforeDir="false" />
       <change beforePath="$PROJECT_DIR$/song_recommend_backend/settings.gradle" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/song_recommend_backend/src/main/java/com/song_recommend_backend/song_recommend_backend/Controller/FileController.java" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/song_recommend_backend/src/main/java/com/song_recommend_backend/song_recommend_backend/Controller/FruitController.java" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/song_recommend_backend/src/main/java/com/song_recommend_backend/song_recommend_backend/SongRecommendBackendApplication.java" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/song_recommend_backend/src/main/java/com/song_recommend_backend/song_recommend_backend/WebConfig.java" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/song_recommend_backend/src/main/java/com/song_recommend_backend/song_recommend_backend/get_pitch.java" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/song_recommend_backend/src/main/java/com/song_recommend_backend/song_recommend_backend/python/test.py" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/song_recommend_backend/src/main/java/com/song_recommend_backend/song_recommend_backend/song/시든 꽃에 물을 주듯-남성.mp3" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/song_recommend_backend/src/main/java/com/song_recommend_backend/song_recommend_backend/목표.txt" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/song_recommend_backend/src/main/java/com/song_recommend_backend/song_recommend_backend/설계1차.png" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/song_recommend_backend/src/main/java/com/example/song_recommend_backend/SongRecommendBackendApplication.java" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/song_recommend_backend/src/main/java/com/example/song_recommend_backend/controller/MainController.java" beforeDir="false" />
       <change beforePath="$PROJECT_DIR$/song_recommend_backend/src/main/resources/application.properties" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/song_recommend_backend/src/test/java/com/song_recommend_backend/song_recommend_backend/SongRecommendBackendApplicationTests.java" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/song_recommend_frontend/.gitignore" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/song_recommend_frontend/.metadata" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/song_recommend_frontend/README.md" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/song_recommend_frontend/analysis_options.yaml" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/song_recommend_frontend/android/.gitignore" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/song_recommend_frontend/android/app/build.gradle" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/song_recommend_frontend/android/app/src/debug/AndroidManifest.xml" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/song_recommend_frontend/android/app/src/main/AndroidManifest.xml" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/song_recommend_frontend/android/app/src/main/java/com/example/song_recommend_frontend/MainActivity.java" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/song_recommend_frontend/android/app/src/main/res/drawable-v21/launch_background.xml" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/song_recommend_frontend/android/app/src/main/res/drawable/launch_background.xml" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/song_recommend_frontend/android/app/src/main/res/mipmap-hdpi/ic_launcher.png" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/song_recommend_frontend/android/app/src/main/res/mipmap-mdpi/ic_launcher.png" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/song_recommend_frontend/android/app/src/main/res/mipmap-xhdpi/ic_launcher.png" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/song_recommend_frontend/android/app/src/main/res/mipmap-xxhdpi/ic_launcher.png" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/song_recommend_frontend/android/app/src/main/res/mipmap-xxxhdpi/ic_launcher.png" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/song_recommend_frontend/android/app/src/main/res/values-night/styles.xml" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/song_recommend_frontend/android/app/src/main/res/values/styles.xml" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/song_recommend_frontend/android/app/src/profile/AndroidManifest.xml" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/song_recommend_frontend/android/build.gradle" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/song_recommend_frontend/android/gradle.properties" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/song_recommend_frontend/android/gradle/wrapper/gradle-wrapper.properties" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/song_recommend_frontend/android/settings.gradle" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/song_recommend_frontend/lib/main.dart" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/song_recommend_frontend/lib/test11.java" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/song_recommend_frontend/pubspec.yaml" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/song_recommend_frontend/test/widget_test.dart" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/song_recommend_frontend/web/favicon.png" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/song_recommend_frontend/web/icons/Icon-192.png" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/song_recommend_frontend/web/icons/Icon-512.png" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/song_recommend_frontend/web/icons/Icon-maskable-192.png" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/song_recommend_frontend/web/icons/Icon-maskable-512.png" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/song_recommend_frontend/web/index.html" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/song_recommend_frontend/web/manifest.json" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/song_recommend_frontend/windows/.gitignore" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/song_recommend_frontend/windows/CMakeLists.txt" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/song_recommend_frontend/windows/flutter/CMakeLists.txt" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/song_recommend_frontend/windows/flutter/generated_plugin_registrant.cc" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/song_recommend_frontend/windows/flutter/generated_plugin_registrant.h" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/song_recommend_frontend/windows/flutter/generated_plugins.cmake" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/song_recommend_frontend/windows/runner/CMakeLists.txt" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/song_recommend_frontend/windows/runner/Runner.rc" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/song_recommend_frontend/windows/runner/flutter_window.cpp" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/song_recommend_frontend/windows/runner/flutter_window.h" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/song_recommend_frontend/windows/runner/main.cpp" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/song_recommend_frontend/windows/runner/resource.h" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/song_recommend_frontend/windows/runner/resources/app_icon.ico" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/song_recommend_frontend/windows/runner/runner.exe.manifest" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/song_recommend_frontend/windows/runner/utils.cpp" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/song_recommend_frontend/windows/runner/utils.h" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/song_recommend_frontend/windows/runner/win32_window.cpp" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/song_recommend_frontend/windows/runner/win32_window.h" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/song_recommend_backend/src/main/resources/static/css/style.css" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/song_recommend_backend/src/main/resources/static/js/audio-processor.js" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/song_recommend_backend/src/main/resources/static/js/renderer.js" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/song_recommend_backend/src/main/resources/static/js/results.js" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/song_recommend_backend/src/main/resources/static/js/scales.js" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/song_recommend_backend/src/main/resources/static/js/yin.js" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/song_recommend_backend/src/main/resources/templates/vocal-range-detector-master/LICENSE.md" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/song_recommend_backend/src/main/resources/templates/vocal-range-detector-master/README.md" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/song_recommend_backend/src/main/resources/templates/vocal-range-detector-master/first-step.html" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/song_recommend_backend/src/main/resources/templates/vocal-range-detector-master/index.html" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/song_recommend_backend/src/main/resources/templates/vocal-range-detector-master/results.html" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/song_recommend_backend/src/main/resources/templates/vocal-range-detector-master/second-step.html" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/song_recommend_backend/src/main/resources/templates/vocal-range-detector-master/third-step.html" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/song_recommend_backend/src/test/java/com/example/song_recommend_backend/SongRecommendBackendApplicationTests.java" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/song_recommend_backend/목표.txt" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/song_recommend_backend/설계1차.png" beforeDir="false" />
     </list>
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
@@ -91,16 +45,20 @@
   <component name="ProjectViewState">
     <option name="showLibraryContents" value="true" />
   </component>
-  <component name="PropertiesComponent"><![CDATA[{
-  "keyToString": {
-    "RunOnceActivity.OpenProjectViewOnStart": "true",
-    "RunOnceActivity.ShowReadmeOnStart": "true",
-    "WebServerToolWindowFactoryState": "false",
-    "ignore.virus.scanning.warn.message": "true",
-    "last_opened_file_path": "C:/coding/Song-recommend",
-    "vue.rearranger.settings.migration": "true"
+  <component name="PropertiesComponent">{
+  &quot;keyToString&quot;: {
+    &quot;RunOnceActivity.OpenProjectViewOnStart&quot;: &quot;true&quot;,
+    &quot;RunOnceActivity.ShowReadmeOnStart&quot;: &quot;true&quot;,
+    &quot;WebServerToolWindowFactoryState&quot;: &quot;false&quot;,
+    &quot;ignore.virus.scanning.warn.message&quot;: &quot;true&quot;,
+    &quot;last_opened_file_path&quot;: &quot;C:/coding/Song-recommend/song-recommend&quot;,
+    &quot;nodejs_package_manager_path&quot;: &quot;npm&quot;,
+    &quot;project.structure.last.edited&quot;: &quot;프로젝트&quot;,
+    &quot;project.structure.proportion&quot;: &quot;0.0&quot;,
+    &quot;project.structure.side.proportion&quot;: &quot;0.0&quot;,
+    &quot;vue.rearranger.settings.migration&quot;: &quot;true&quot;
   }
-}]]></component>
+}</component>
   <component name="RunManager">
     <configuration default="true" type="DjangoTestsConfigurationType">
       <module name="song_recommend_backend" />
@@ -205,6 +163,10 @@
       <option name="presentableId" value="Default" />
       <updated>1710405433999</updated>
       <workItem from="1710405435193" duration="36000" />
+      <workItem from="1712361598562" duration="52000" />
+      <workItem from="1712792972564" duration="14000" />
+      <workItem from="1712796400097" duration="32000" />
+      <workItem from="1712796761006" duration="14000" />
     </task>
     <servers />
   </component>
