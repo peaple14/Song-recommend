@@ -1,13 +1,13 @@
-package com.example.song_recommend_backend;
+package com.example.songrecommend;
 
 import org.springframework.boot.SpringApplication;
 import org.springframework.boot.autoconfigure.SpringBootApplication;
 
 @SpringBootApplication
-public class SongRecommendBackendApplication {
+public class SongRecommendApplication {
 
 	public static void main(String[] args) {
-		SpringApplication.run(SongRecommendBackendApplication.class, args);
+		SpringApplication.run(SongRecommendApplication.class, args);
 	}
 
 }

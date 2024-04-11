@@ -1,10 +1,10 @@
-package com.example.song_recommend_backend;
+package com.example.songrecommend;
 
 import org.junit.jupiter.api.Test;
 import org.springframework.boot.test.context.SpringBootTest;
 
 @SpringBootTest
-class SongRecommendBackendApplicationTests {
+class SongRecommendApplicationTests {
 
 	@Test
 	void contextLoads() {
