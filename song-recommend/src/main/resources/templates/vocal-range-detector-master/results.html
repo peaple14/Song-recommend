@@ -31,4 +31,41 @@
 <button th:onclick="|location.href = '/index'|">Restart</button>
 </body>
 <script th:src="@{/js/results.js}"></script>
+<script>
+    // 페이지가 로드될 때 자동으로 실행되는 함수
+    window.onload = function() {
+        // lowNote와 highNote 값을 가져옵니다.
+        let lowNote = sessionStorage.getItem('lowNote');
+        let highNote = sessionStorage.getItem('highNote');
+
+        // POST 요청을 위한 데이터를 만듭니다.
+        let data = {
+            lowNote: lowNote,
+            highNote: highNote
+        };
+
+        // Fetch API를 사용하여 비동기적으로 POST 요청을 보냅니다.
+        fetch('getnote', {
+            method: 'POST',
+            headers: {
+                'Content-Type': 'application/json'
+            },
+            body: JSON.stringify(data)
+        })
+            .then(response => {
+                if (!response.ok) {
+                    throw new Error('Network response was not ok');
+                }
+                return response.json();
+            })
+            .then(data => {
+                // 서버로부터의 응답을 처리합니다.
+                console.log(data);
+            })
+            .catch(error => {
+                // 오류를 처리합니다.
+                console.error('There was a problem with your fetch operation:', error);
+            });
+    };
+</script>
 </html>
