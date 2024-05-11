@@ -97,7 +97,7 @@ async function update (e) { // 업데이트 함수
  * @param {Blob} data The blob containing the recorded audio data.
  */
 async function process(data) { // 데이터 처리 함수
-                               // Load the blob.
+  // Load the blob.
   const response = await fetch(URL.createObjectURL(data)); // Blob 데이터 로드
   const arrayBuffer = await response.arrayBuffer(); // ArrayBuffer로 변환
   // Decode the audio.

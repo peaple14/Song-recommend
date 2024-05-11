@@ -134,4 +134,3 @@ function YINDetector(float32AudioBuffer, sampleRate) {
 
   return sampleRate / betterTau;
 }
-
