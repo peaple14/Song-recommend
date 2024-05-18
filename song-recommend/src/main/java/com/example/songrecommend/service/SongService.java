@@ -1,19 +1,24 @@
 package com.example.songrecommend.service;
 
 
-import com.example.songrecommend.dto.VocalDto;
+import com.example.songrecommend.dto.SongDto;
+import com.example.songrecommend.entity.SongEntity;
+import com.example.songrecommend.repository.SongRepository;
 import lombok.RequiredArgsConstructor;
 import org.springframework.stereotype.Service;
 
 import java.util.List;
 
 @Service
-public class VocalService {
+@RequiredArgsConstructor
+public class SongService {
 
-    public VocalDto change_int(VocalDto vocalDto) {
-        vocalDto.setHighNote_int(octaveAndNoteToMidi(vocalDto.getHighNote()));
-        vocalDto.setLowNote_int(octaveAndNoteToMidi(vocalDto.getLowNote()));
-        return vocalDto;
+    private final SongRepository songRepository;
+
+    public SongDto change_int(SongDto songDto) {
+        songDto.setHighest_Int((long) octaveAndNoteToMidi(songDto.getHighest_Note()));
+        songDto.setLowest_Int((long) octaveAndNoteToMidi(songDto.getLowest_Note()));
+        return songDto;
     }
 
     public static int octaveAndNoteToMidi(String octaveAndNote) {
@@ -56,6 +61,28 @@ public class VocalService {
             noteValue--;
         }
         return (octave * 12) + noteValue;
+    }
+
+
+    //가장 비슷한 dto값 리턴
+    public SongDto recommendSimilarVocal(long inputLowNoteInt, long inputHighNoteInt) {
+        List<SongEntity> allVocals = songRepository.findAll();
+        SongDto best_songdto = null;
+        double highestSimilarity = -1;
+
+        for (SongEntity vocal : allVocals) {//비교해서 가장 유사한값 찾기
+            long[] vectorA = {inputLowNoteInt, inputHighNoteInt};//비교하려는 대상
+            long[] vectorB = { vocal.getLowest_int(), vocal.getHighest_int()};//db에 저장된 값들
+
+            double similarity = CosineSimilarity.calculateCosineSimilarity(vectorA, vectorB);
+
+            if (similarity > highestSimilarity) {
+                highestSimilarity = similarity;
+                best_songdto = SongDto.toDto(vocal);
+            }
+        }
+
+        return best_songdto;
     }
 
 

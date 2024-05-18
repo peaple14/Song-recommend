@@ -2,7 +2,7 @@
 <project version="4">
   <component name="ChangeListManager">
     <list default="true" id="1187508e-c248-4408-8921-9f7795244d33" name="변경" comment="">
-      <change beforePath="$PROJECT_DIR$/song-recommend/src/main/java/com/example/songrecommend/entity/SongEntity.java" beforeDir="false" afterPath="$PROJECT_DIR$/song-recommend/src/main/java/com/example/songrecommend/entity/SongEntity.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/song-recommend/src/main/java/com/example/songrecommend/controller/MainController.java" beforeDir="false" afterPath="$PROJECT_DIR$/song-recommend/src/main/java/com/example/songrecommend/controller/MainController.java" afterDir="false" />
     </list>
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
@@ -25,7 +25,7 @@
     "RunOnceActivity.ShowReadmeOnStart": "true",
     "WebServerToolWindowFactoryState": "false",
     "ignore.virus.scanning.warn.message": "true",
-    "last_opened_file_path": "C:/coding/Song-recommend",
+    "last_opened_file_path": "C:/coding/Song-recommend/song-recommend",
     "nodejs_package_manager_path": "npm",
     "project.structure.last.edited": "프로젝트",
     "project.structure.proportion": "0.0",
@@ -143,6 +143,7 @@
       <workItem from="1712796761006" duration="14000" />
       <workItem from="1712797298724" duration="50000" />
       <workItem from="1712839950691" duration="8000" />
+      <workItem from="1715687487441" duration="17000" />
     </task>
     <servers />
   </component>

@@ -28,6 +28,12 @@ public class SongEntity {
     @Column
     private String highest_note; // 최고음
 
+    @Column
+    private long lowest_int; // 최저음 정수값
+
+    @Column
+    private long highest_int; // 최고음 정수값
+
 
 
 
