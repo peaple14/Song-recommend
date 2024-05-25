@@ -19,11 +19,11 @@ public class MainController {
     public String start(){
         //재 테스트하기위해 보관
         SongDto songDto = new SongDto();
-        songDto.setHighest_Note("A4");
-        songDto.setLowest_Note("A3");
-        System.out.println("들어왔을때:" + songDto);
+        songDto.setHighest_Note("F#3");
+        songDto.setLowest_Note("C#5");
+//        System.out.println("들어왔을때:" + songDto);
         songDto = songService.change_int(songDto);
-        System.out.println("나왔을때:" + songDto);
+        System.out.println("들어간값:" + songDto);
         songDto.setHighest_Int(songDto.getHighest_Int());
         System.out.println("노래추천테스트:" + songService.recommendSimilarVocal(songDto.getLowest_Int(), songDto.getHighest_Int()));
         return "/vocal/index";
