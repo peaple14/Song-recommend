@@ -40,12 +40,15 @@
         let lowNote = sessionStorage.getItem('lowNote');
         let highNote = sessionStorage.getItem('highNote');
 
+        console.log("작은값: " + lowNote);
+        console.log("큰값: " + highNote);
+
         let data = {
-            lowNote: lowNote,
-            highNote: highNote
+            lowest_Note: lowNote,
+            highest_Note: highNote
         };
 
-        fetch('getnote', {
+        fetch('/getnote', {
             method: 'POST',
             headers: {
                 'Content-Type': 'application/json'
@@ -59,7 +62,7 @@
                 return response.json();
             })
             .then(data => {
-                console.log(data);
+                console.log('Received data:', data);
             })
             .catch(error => {
                 console.error('오류남:', error);

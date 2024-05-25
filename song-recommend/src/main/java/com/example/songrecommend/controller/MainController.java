@@ -55,14 +55,13 @@ public class MainController {
 
     @PostMapping("/getnote")
     @ResponseBody
-    public String getNote(@RequestBody SongDto songDto) {
+    public SongDto getNote(@RequestBody SongDto songDto) {
+        System.out.println("getnote 들어옴");
         System.out.println("들어왔을때:" + songDto);
         songDto = songService.change_int(songDto);
         System.out.println("나왔을때:" + songDto);
-//        문제1.1회적으로 적용되게 해야한다.(점차 낮아지거나 높아지는게아니라 딱 거기)
-//        문제2.페이지쪽으로 문제.노래 추천후 다시 적용하고 리턴
-//        문제3.웹페이지 디자인 문제
-        // 결과 반환
-        return "Note received successfully";
+        System.out.println("노래추천테스트 result버전:" + songService.recommendSimilarVocal(songDto.getLowest_Int(), songDto.getHighest_Int()));
+        songDto = songService.recommendSimilarVocal(songDto.getLowest_Int(), songDto.getHighest_Int());
+        return songDto;
     }
 }
