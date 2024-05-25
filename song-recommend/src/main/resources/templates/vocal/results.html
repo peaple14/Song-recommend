@@ -32,6 +32,10 @@
 </body>
 <script th:src="@{/js/results.js}"></script>
 <script>
+    console.log("작은값" + lowNote)
+    console.log("큰값" + highNote)
+</script>
+<script>
     window.onload = function() {
         let lowNote = sessionStorage.getItem('lowNote');
         let highNote = sessionStorage.getItem('highNote');

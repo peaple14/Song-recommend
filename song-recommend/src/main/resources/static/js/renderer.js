@@ -112,9 +112,9 @@ async function process(data) { // 데이터 처리 함수
     let note = noteArray[0]; // 첫 번째 음표 추출
     if (window.location.pathname == "/first-step") { // 현재 파일이 "first-step.html"인 경우(주소로 변경)
       console.log("여기까진됨.")
-      sessionStorage.setItem("baseNote", note); // 세션 스토리지에 기준 음표 저장(됨)
+      sessionStorage.setItem("highNote", note); // 세션 스토리지에 기준 음표 저장(됨)
       let text = document.createElement("p"); // 새 p 요소 생성
-      let node = document.createTextNode("Your base note is " + note + "."); // 텍스트 노드 생성
+      let node = document.createTextNode("Your high note is " + note + "."); // 텍스트 노드 생성
       text.append(node); // 텍스트 노드 추가
       body.append(text); // body에 요소 추가
 
@@ -122,24 +122,18 @@ async function process(data) { // 데이터 처리 함수
       button.innerHTML = "Next Step"; // 버튼 텍스트 설정
       button.setAttribute("onclick", "location.href = 'second-step'"); // 버튼 클릭 이벤트 설정
       body.append(button); // body에 버튼 추가
-    } else { // 현재 파일 이름이 "first-step.html"이 아닌 경우 -> 또 주소로 변경 해야함
+    } else { // 2페이지
+      console.log("여기까진됨.")
+      sessionStorage.setItem("lowNote", note); // 세션 스토리지에 기준 음표 저장(됨)
       let text = document.createElement("p"); // 새 p 요소 생성
+      let node = document.createTextNode("Your low note is " + note + "."); // 텍스트 노드 생성
+      text.append(node); // 텍스트 노드 추가
+      body.append(text); // body에 요소 추가
 
-      let noteToSing = document.getElementById("noteToSing"); // 노래할 음표 요소 가져오기
-      let goal = noteToSing.innerHTML.substring(17, noteToSing.innerHTML.length - 1); // 목표 음표 추출
-      if (note === goal) { // 노래한 음표가 목표 음표와 같은 경우
-        let node = document.createTextNode("Nice! You correctly sang " + note + "."); // 텍스트 노드 생성
-        text.setAttribute("id", "yousang"); // id 속성 설정
-        text.append(node); // 텍스트 노드 추가
-        body.append(text); // body에 요소 추가
-        pass(); // 성공 처리 함수 호출
-      } else { // 노래한 음표가 목표 음표와 다른 경우
-        let node = document.createTextNode("Oops! You sang " + note + " instead of " + goal + ".");  // 텍스트 노드 생성
-        text.setAttribute("id", "yousang"); // id 속성 설정
-        text.append(node); // 텍스트 노드 추가
-        body.append(text); // body에 요소 추가
-        fail(); // 실패 처리 함수 호출
-      }
+      let button = document.createElement("BUTTON"); // 새 버튼 요소 생성
+      button.innerHTML = "Next Step"; // 버튼 텍스트 설정
+      button.setAttribute("onclick", "location.href = 'results'"); // 버튼 클릭 이벤트 설정
+      body.append(button); // body에 버튼 추가
     }
   }
 }

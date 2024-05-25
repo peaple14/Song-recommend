@@ -21,7 +21,7 @@ public class InitSongData {
     public void init() {
         if (songRepository.count() == 0) { // 데이터가 없을 경우에만 초기화
             insertVocal("꿈속에 너", "전상근", "남성", "A2", "A4");
-            insertVocal("찰나가 영원이 될 때", "마크툽", "남성", "A#2", "D#5");
+            insertVocal("찰나가 영원이 될 때", "마크툽", "남성", "A#2", "A#5");
             insertVocal("흔들리는 꽃들 속에서 네 샴푸향이 느껴진 거야", "장범준", "남성", "G#2", "E4");
             insertVocal("나는 나비", "YB(윤도현밴드)", "남성", "F3", "G#4");
             insertVocal("민물장어의 꿈", "하현우", "남성", "F#2", "A4");
@@ -30,11 +30,11 @@ public class InitSongData {
             insertVocal("사랑에 연습이 있었다면", "임재현", "남성", "C#2", "A#4");
             insertVocal("조금 취했어", "임재현", "남성", "A2", "C5");
             insertVocal("사랑이란 멜로는 없어", "전상근", "남성", "B2", "C#5");
-            insertVocal("걱정말아요 그대", "이적", "남성", "F2", "G4");
+            insertVocal("걱정말아요 그대", "이적", "남성", "F2", "B4");
             insertVocal("I AM", "IVE(아이브)", "여성", "F#3", "G5");
-            insertVocal("밤양갱", "비비", "여성", "F3", "F#4");
-            insertVocal("사랑하게 될 줄 알았어", "전미도", "여성", "G3", "E4");
-            insertVocal("후라이의 꿈", "이수현", "여성", "E2", "E4");
+            insertVocal("밤양갱", "비비", "여성", "G#3", "C#5");
+            insertVocal("사랑하게 될 줄 알았어", "전미도", "여성", "G3", "E5");
+            insertVocal("후라이의 꿈", "이수현", "여성", "E3", "E5");
             insertVocal("취중진담", "전람회", "남성", "G4", "B4");
             insertVocal("그날처럼", "장덕철", "남성", "C5", "G#3");
             insertVocal("같은 시간 속의 너", "나얼", "남성", "D5", "G3");
