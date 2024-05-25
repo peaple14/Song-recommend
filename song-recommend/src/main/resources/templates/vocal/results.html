@@ -4,33 +4,18 @@
     <link rel="stylesheet" th:href="@{/css/style.css}"/>
     <title>Results</title>
 </head>
-<h2>Your Vocal Range Results</h2>
 <body>
+<h2>노래 추천 결과</h2>
 <table style="width:100%">
     <tr>
-        <th>Female Voice Types</th>
-        <th>Male Voice Types</th>
-    </tr>
-    <tr>
-        <td>Soprano (C4-C6)</td>
-        <td>Countertenor (E3-E5)</td>
-    </tr>
-    <tr>
-        <td>Mezzo-soprano (A3-A5)</td>
-        <td>Tenor (C3-C5)</td>
-    </tr>
-    <tr>
-        <td>Contralto (F3-F5)</td>
-        <td>Baritone (A2-A4)</td>
-    </tr>
-    <tr>
-        <td></td>
-        <td>Bass (E2-E4)</td>
+        <th>Title</th>
+        <th>Artist</th>
+        <th>Gender</th>
     </tr>
 </table>
 <button th:onclick="|location.href = '/'|">Restart</button>
-</body>
-<script th:src="@{/js/results.js}"></script>
+
+<!--<script th:src="@{/js/results.js}"></script>-->
 <script>
     console.log("작은값" + lowNote)
     console.log("큰값" + highNote)
@@ -40,12 +25,15 @@
         let lowNote = sessionStorage.getItem('lowNote');
         let highNote = sessionStorage.getItem('highNote');
 
+        console.log("작은값: " + lowNote);
+        console.log("큰값: " + highNote);
+
         let data = {
-            lowNote: lowNote,
-            highNote: highNote
+            lowest_Note: lowNote,
+            highest_Note: highNote
         };
 
-        fetch('getnote', {
+        fetch('/getnote', {
             method: 'POST',
             headers: {
                 'Content-Type': 'application/json'
@@ -59,11 +47,21 @@
                 return response.json();
             })
             .then(data => {
-                console.log(data);
+                console.log('Received data:', data);
+                let table = document.querySelector('table');
+                let row = table.insertRow();
+                let titleCell = row.insertCell();
+                let artistCell = row.insertCell();
+                let genderCell = row.insertCell();
+
+                titleCell.innerText = data.title;
+                artistCell.innerText = data.artist;
+                genderCell.innerText = data.gender;
             })
             .catch(error => {
                 console.error('오류남:', error);
             });
     };
 </script>
+</body>
 </html>
