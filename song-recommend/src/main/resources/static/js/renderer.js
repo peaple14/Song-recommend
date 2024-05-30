@@ -71,7 +71,6 @@ function stop () { // 오디오 녹음 중지 함수
   clearInterval(refreshHandle); // 업데이트 핸들러 종료
   let text = document.createElement("p"); // 새 p 요소 생성
   let node = document.createTextNode("Recording Complete."); // 텍스트 노드 생성
-  console.log("완료노드 되도록.")
   text.setAttribute("id", "complete"); // id 속성 설정
   text.append(node); // 텍스트 노드 추가
   body.append(text); // body에 요소 추가
@@ -111,7 +110,6 @@ async function process(data) { // 데이터 처리 함수
     stop(); // 녹음 중지
     let note = noteArray[0]; // 첫 번째 음표 추출
     if (window.location.pathname == "/first-step") { // 현재 파일이 "first-step.html"인 경우(주소로 변경)
-      console.log("여기까진됨.")
       sessionStorage.setItem("highNote", note); // 세션 스토리지에 기준 음표 저장(됨)
       let text = document.createElement("p"); // 새 p 요소 생성
       let node = document.createTextNode("Your high note is " + note + "."); // 텍스트 노드 생성
@@ -123,7 +121,6 @@ async function process(data) { // 데이터 처리 함수
       button.setAttribute("onclick", "location.href = 'second-step'"); // 버튼 클릭 이벤트 설정
       body.append(button); // body에 버튼 추가
     } else { // 2페이지
-      console.log("여기까진됨.")
       sessionStorage.setItem("lowNote", note); // 세션 스토리지에 기준 음표 저장(됨)
       let text = document.createElement("p"); // 새 p 요소 생성
       let node = document.createTextNode("Your low note is " + note + "."); // 텍스트 노드 생성

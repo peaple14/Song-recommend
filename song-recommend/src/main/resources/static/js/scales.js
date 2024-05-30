@@ -54,11 +54,11 @@ nextNote(); // 다음 음표 표시 함수 호출
 
 function pass() {
   let noteToSing = document.getElementById("noteToSing"); // noteToSing 요소 가져오기
-  console.log("가져옴?");
+  console.log("noteToSing 요소 가져왔을경우");
   if (noteToSing != null) { // 요소가 존재하는 경우
     noteToSing.parentNode.removeChild(noteToSing); // noteToSing 요소 삭제
   } else{
-    console.log("이거 왜 안가져옴");
+    console.log("noteToSing 요소 없을 경우");
   }
   nextNote(); // 다음 음표 표시 함수 호출
 }

@@ -1,5 +1,3 @@
-//여기가 알고리즘의 핵심일것 같음.
-
 /*
    Copyright (C) 2003-2009 Paul Brossier <piem@aubio.org>
    This file is part of aubio.
