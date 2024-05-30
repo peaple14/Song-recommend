@@ -8,18 +8,16 @@
 <h2>노래 추천 결과</h2>
 <table style="width:100%">
     <tr>
+        <th>No</th>
         <th>Title</th>
         <th>Artist</th>
         <th>Gender</th>
+        <th>Lowest Note</th>
+        <th>Highest Note</th>
     </tr>
 </table>
 <button th:onclick="|location.href = '/'|">Restart</button>
 
-<!--<script th:src="@{/js/results.js}"></script>-->
-<script>
-    console.log("작은값" + lowNote)
-    console.log("큰값" + highNote)
-</script>
 <script>
     window.onload = function() {
         let lowNote = sessionStorage.getItem('lowNote');
@@ -49,14 +47,23 @@
             .then(data => {
                 console.log('Received data:', data);
                 let table = document.querySelector('table');
-                let row = table.insertRow();
-                let titleCell = row.insertCell();
-                let artistCell = row.insertCell();
-                let genderCell = row.insertCell();
 
-                titleCell.innerText = data.title;
-                artistCell.innerText = data.artist;
-                genderCell.innerText = data.gender;
+                data.forEach((song, index) => {
+                    let row = table.insertRow();
+                    let numberCell = row.insertCell(); // 번호를 표시할 셀
+                    let titleCell = row.insertCell();
+                    let artistCell = row.insertCell();
+                    let genderCell = row.insertCell();
+                    let lowestNoteCell = row.insertCell();
+                    let highestNoteCell = row.insertCell();
+
+                    numberCell.innerText = index + 1; // 인덱스는 0부터 시작하므로 1을 더함
+                    titleCell.innerText = song.title;
+                    artistCell.innerText = song.artist;
+                    genderCell.innerText = song.gender;
+                    lowestNoteCell.innerText = song.lowest_Note;
+                    highestNoteCell.innerText = song.highest_Note;
+                });
             })
             .catch(error => {
                 console.error('오류남:', error);
