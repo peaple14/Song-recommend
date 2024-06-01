@@ -3,20 +3,68 @@
 <head>
     <link rel="stylesheet" th:href="@{/css/style.css}"/>
     <title>Results</title>
+    <style>
+        .icon-container {
+            display: inline-flex;
+            align-items: center;
+            cursor: pointer;
+            font-size: 1.5em; /* 아이콘 크기를 조정 */
+            margin-left: 16px; /* 버튼과 아이콘 사이의 간격을 조정 */
+        }
+
+        .icon-container svg {
+            width: 36px; /* 아이콘 크기 조정 */
+            height: 36px; /* 아이콘 크기 조정 */
+        }
+
+        .large-button {
+            font-size: 1.5em; /* 버튼 텍스트 크기를 조정 */
+            padding: 10px 20px; /* 버튼 크기를 조정 */
+            margin-top: 10px; /* 버튼을 아래로 내림 */
+        }
+
+        .note-container {
+            display: flex;
+            justify-content: center;
+            align-items: center;
+            gap: 20px; /* 요소 사이의 간격 조정 */
+        }
+
+        table {
+            margin: 0 auto; /* 테이블을 가운데 정렬 */
+            width: 80%; /* 테이블의 너비를 조정 */
+        }
+
+        th, td {
+            text-align: center; /* 텍스트를 가운데 정렬 */
+            padding: 8px;
+        }
+    </style>
 </head>
 <body>
 <h2>노래 추천 결과</h2>
-<table style="width:100%">
+<div class="note-container">
+    <p>최저 음: <span id="lowNoteValue"></span></p>
+    <p>최고 음: <span id="highNoteValue"></span></p>
+</div>
+<table>
     <tr>
         <th>No</th>
-        <th>Title</th>
-        <th>Artist</th>
-        <th>Gender</th>
-        <th>Lowest Note</th>
-        <th>Highest Note</th>
+        <th>제목</th>
+        <th>가수</th>
+        <th>성별</th>
+        <th>최저 음</th>
+        <th>최고 음</th>
     </tr>
 </table>
-<button th:onclick="|location.href = '/'|">Restart</button>
+<img src="/png/악보.png" alt="Piano Keyboard" style="display:block; margin: 0 auto; max-width: 40%; height: auto;">
+<br>
+<button class="large-button" th:onclick="|location.href = '/'|">Restart</button>
+<div class="icon-container" onclick="copyUrl()">
+    <svg xmlns="http://www.w3.org/2000/svg" fill="currentColor" class="bi bi-chat-dots-fill" viewBox="0 0 16 16">
+        <path d="M16 8c0 3.866-3.582 7-8 7a9 9 0 0 1-2.347-.306c-.584.296-1.925.864-4.181 1.234-.2.032-.352-.176-.273-.362.354-.836.674-1.950.77-2.966C.744 11.37 0 9.76 0 8c0-3.866 3.582-7 8-7s8 3.134 8 7M5 8a1 1 0 1 0-2 0 1 1 0 0 0 2 0m4 0a1 1 0 1 0-2 0 1 1 0 0 0 2 0m3 1a1 1 0 1 0 0-2 1 1 0 0 0 0 2"/>
+    </svg>
+</div>
 
 <script>
     window.onload = function() {
@@ -25,6 +73,9 @@
 
         console.log("작은값: " + lowNote);
         console.log("큰값: " + highNote);
+
+        document.getElementById('lowNoteValue').innerText = lowNote;
+        document.getElementById('highNoteValue').innerText = highNote;
 
         let data = {
             lowest_Note: lowNote,
@@ -69,6 +120,15 @@
                 console.error('오류남:', error);
             });
     };
+
+    function copyUrl() {
+        const url = window.location.href;
+        navigator.clipboard.writeText(url).then(() => {
+            alert('URL이 클립보드에 복사되었습니다.');
+        }).catch(err => {
+            console.error('URL 복사 실패:', err);
+        });
+    }
 </script>
 </body>
 </html>

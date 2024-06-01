@@ -23,13 +23,18 @@
     <option name="stateVersion" value="1" />
   </component>
   <component name="ProjectColorInfo">{
+<<<<<<< HEAD
   &quot;associatedIndex&quot;: 0
+=======
+  &quot;associatedIndex&quot;: 7
+>>>>>>> c3ec548e891e1c88e811d551fde96cd1124641c5
 }</component>
   <component name="ProjectId" id="2dfiFrpAg0QdTGLIg5Evy8RCA1M" />
   <component name="ProjectLevelVcsManager" settingsEditedManually="true" />
   <component name="ProjectViewState">
     <option name="showLibraryContents" value="true" />
   </component>
+<<<<<<< HEAD
   <component name="PropertiesComponent"><![CDATA[{
   "keyToString": {
     "RunOnceActivity.OpenProjectViewOnStart": "true",
@@ -61,6 +66,19 @@
       <recent name="C:\Users\kim min gyu\AppData\Roaming\JetBrains\IntelliJIdea2023.2\extensions" />
     </key>
   </component>
+=======
+  <component name="PropertiesComponent">{
+  &quot;keyToString&quot;: {
+    &quot;RunOnceActivity.OpenProjectViewOnStart&quot;: &quot;true&quot;,
+    &quot;RunOnceActivity.ShowReadmeOnStart&quot;: &quot;true&quot;,
+    &quot;WebServerToolWindowFactoryState&quot;: &quot;false&quot;,
+    &quot;git-widget-placeholder&quot;: &quot;KIMMINGYU&quot;,
+    &quot;ignore.virus.scanning.warn.message&quot;: &quot;true&quot;,
+    &quot;last_opened_file_path&quot;: &quot;C:/vocal-range-detector-KIMMINGYU-main&quot;,
+    &quot;vue.rearranger.settings.migration&quot;: &quot;true&quot;
+  }
+}</component>
+>>>>>>> c3ec548e891e1c88e811d551fde96cd1124641c5
   <component name="RunManager">
     <configuration default="true" type="DjangoTestsConfigurationType">
       <module name="song_recommend_backend" />
@@ -164,6 +182,7 @@
       <option name="presentableId" value="Default" />
       <updated>1710405433999</updated>
       <workItem from="1710405435193" duration="36000" />
+<<<<<<< HEAD
       <workItem from="1712361598562" duration="52000" />
       <workItem from="1712792972564" duration="14000" />
       <workItem from="1712796400097" duration="32000" />
@@ -177,6 +196,10 @@
       <workItem from="1717232739613" duration="532000" />
       <workItem from="1717233299901" duration="12000" />
       <workItem from="1717233555908" duration="1345000" />
+=======
+      <workItem from="1712316838068" duration="91000" />
+      <workItem from="1712317044823" duration="27000" />
+>>>>>>> c3ec548e891e1c88e811d551fde96cd1124641c5
     </task>
     <task id="LOCAL-00001" summary="프론트 부분 마무리 수정">
       <option name="closed" value="true" />
