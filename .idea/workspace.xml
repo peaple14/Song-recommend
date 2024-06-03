@@ -1,38 +1,84 @@
 <?xml version="1.0" encoding="UTF-8"?>
 <project version="4">
+  <component name="AutoImportSettings">
+    <option name="autoReloadType" value="SELECTIVE" />
+  </component>
   <component name="ChangeListManager">
-    <list default="true" id="1187508e-c248-4408-8921-9f7795244d33" name="변경" comment="">
-      <change beforePath="$PROJECT_DIR$/song-recommend/src/main/java/com/example/songrecommend/controller/MainController.java" beforeDir="false" afterPath="$PROJECT_DIR$/song-recommend/src/main/java/com/example/songrecommend/controller/MainController.java" afterDir="false" />
-    </list>
+    <list default="true" id="1187508e-c248-4408-8921-9f7795244d33" name="변경" comment="" />
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
     <option name="HIGHLIGHT_NON_ACTIVE_CHANGELIST" value="false" />
     <option name="LAST_RESOLUTION" value="IGNORE" />
   </component>
   <component name="Git.Settings">
+    <option name="RECENT_BRANCH_BY_REPOSITORY">
+      <map>
+        <entry key="$PROJECT_DIR$" value="master" />
+      </map>
+    </option>
     <option name="RECENT_GIT_ROOT_PATH" value="$PROJECT_DIR$" />
+    <option name="ROOT_SYNC" value="DONT_SYNC" />
   </component>
   <component name="MarkdownSettingsMigration">
     <option name="stateVersion" value="1" />
   </component>
+  <component name="ProjectColorInfo">{
+<<<<<<< HEAD
+  &quot;associatedIndex&quot;: 0
+=======
+  &quot;associatedIndex&quot;: 7
+>>>>>>> c3ec548e891e1c88e811d551fde96cd1124641c5
+}</component>
   <component name="ProjectId" id="2dfiFrpAg0QdTGLIg5Evy8RCA1M" />
+  <component name="ProjectLevelVcsManager" settingsEditedManually="true" />
   <component name="ProjectViewState">
     <option name="showLibraryContents" value="true" />
   </component>
+<<<<<<< HEAD
   <component name="PropertiesComponent"><![CDATA[{
   "keyToString": {
     "RunOnceActivity.OpenProjectViewOnStart": "true",
     "RunOnceActivity.ShowReadmeOnStart": "true",
     "WebServerToolWindowFactoryState": "false",
+    "git-widget-placeholder": "KIMMINGYU",
     "ignore.virus.scanning.warn.message": "true",
-    "last_opened_file_path": "C:/coding/Song-recommend/song-recommend",
+    "last_opened_file_path": "C:/Song-recommend",
+    "node.js.detected.package.eslint": "true",
+    "node.js.detected.package.tslint": "true",
+    "node.js.selected.package.eslint": "(autodetect)",
+    "node.js.selected.package.tslint": "(autodetect)",
     "nodejs_package_manager_path": "npm",
-    "project.structure.last.edited": "프로젝트",
-    "project.structure.proportion": "0.0",
+    "project.structure.last.edited": "Project",
+    "project.structure.proportion": "0.15",
     "project.structure.side.proportion": "0.0",
     "vue.rearranger.settings.migration": "true"
+  },
+  "keyToStringList": {
+    "GitStage.ChangesTree.GroupingKeys": [
+      "directory",
+      "module",
+      "repository"
+    ]
   }
 }]]></component>
+  <component name="RecentsManager">
+    <key name="CopyFile.RECENT_KEYS">
+      <recent name="C:\Users\kim min gyu\AppData\Roaming\JetBrains\IntelliJIdea2023.2\extensions" />
+    </key>
+  </component>
+=======
+  <component name="PropertiesComponent">{
+  &quot;keyToString&quot;: {
+    &quot;RunOnceActivity.OpenProjectViewOnStart&quot;: &quot;true&quot;,
+    &quot;RunOnceActivity.ShowReadmeOnStart&quot;: &quot;true&quot;,
+    &quot;WebServerToolWindowFactoryState&quot;: &quot;false&quot;,
+    &quot;git-widget-placeholder&quot;: &quot;KIMMINGYU&quot;,
+    &quot;ignore.virus.scanning.warn.message&quot;: &quot;true&quot;,
+    &quot;last_opened_file_path&quot;: &quot;C:/vocal-range-detector-KIMMINGYU-main&quot;,
+    &quot;vue.rearranger.settings.migration&quot;: &quot;true&quot;
+  }
+}</component>
+>>>>>>> c3ec548e891e1c88e811d551fde96cd1124641c5
   <component name="RunManager">
     <configuration default="true" type="DjangoTestsConfigurationType">
       <module name="song_recommend_backend" />
@@ -53,19 +99,6 @@
       <option name="USE_OPTIONS" value="false" />
       <option name="OPTIONS" value="" />
       <method v="2" />
-    </configuration>
-    <configuration default="true" type="JetRunConfigurationType">
-      <module name="song_recommend_backend" />
-      <method v="2">
-        <option name="Make" enabled="true" />
-      </method>
-    </configuration>
-    <configuration default="true" type="KotlinStandaloneScriptRunConfigurationType">
-      <module name="song_recommend_backend" />
-      <option name="filePath" />
-      <method v="2">
-        <option name="Make" enabled="true" />
-      </method>
     </configuration>
     <configuration default="true" type="PyBehaveRunConfigurationType" factoryName="Behave">
       <module name="song_recommend_backend" />
@@ -127,16 +160,29 @@
       <EXTENSION ID="PythonCoverageRunConfigurationExtension" runner="coverage.py" />
       <method v="2" />
     </configuration>
+    <configuration default="true" type="JetRunConfigurationType">
+      <module name="song_recommend_backend" />
+      <method v="2">
+        <option name="Make" enabled="true" />
+      </method>
+    </configuration>
+    <configuration default="true" type="KotlinStandaloneScriptRunConfigurationType">
+      <module name="song_recommend_backend" />
+      <option name="filePath" />
+      <method v="2">
+        <option name="Make" enabled="true" />
+      </method>
+    </configuration>
   </component>
   <component name="SpellCheckerSettings" RuntimeDictionaries="0" Folders="0" CustomDictionaries="0" DefaultDictionary="애플리케이션 수준" UseSingleDictionary="true" transferred="true" />
   <component name="TaskManager">
     <task active="true" id="Default" summary="디폴트 작업">
-      <changelist id="1187508e-c248-4408-8921-9f7795244d33" name="변경" comment="" />
       <created>1710405433999</created>
       <option name="number" value="Default" />
       <option name="presentableId" value="Default" />
       <updated>1710405433999</updated>
       <workItem from="1710405435193" duration="36000" />
+<<<<<<< HEAD
       <workItem from="1712361598562" duration="52000" />
       <workItem from="1712792972564" duration="14000" />
       <workItem from="1712796400097" duration="32000" />
@@ -144,10 +190,44 @@
       <workItem from="1712797298724" duration="50000" />
       <workItem from="1712839950691" duration="8000" />
       <workItem from="1715687487441" duration="17000" />
+      <workItem from="1717232325845" duration="36000" />
+      <workItem from="1717232380685" duration="99000" />
+      <workItem from="1717232599311" duration="71000" />
+      <workItem from="1717232739613" duration="532000" />
+      <workItem from="1717233299901" duration="12000" />
+      <workItem from="1717233555908" duration="1345000" />
+=======
+      <workItem from="1712316838068" duration="91000" />
+      <workItem from="1712317044823" duration="27000" />
+>>>>>>> c3ec548e891e1c88e811d551fde96cd1124641c5
     </task>
+    <task id="LOCAL-00001" summary="프론트 부분 마무리 수정">
+      <option name="closed" value="true" />
+      <created>1717233223386</created>
+      <option name="number" value="00001" />
+      <option name="presentableId" value="LOCAL-00001" />
+      <option name="project" value="LOCAL" />
+      <updated>1717233223386</updated>
+    </task>
+    <option name="localTasksCounter" value="2" />
     <servers />
   </component>
   <component name="TypeScriptGeneratedFilesManager">
     <option name="version" value="3" />
+  </component>
+  <component name="Vcs.Log.Tabs.Properties">
+    <option name="TAB_STATES">
+      <map>
+        <entry key="MAIN">
+          <value>
+            <State />
+          </value>
+        </entry>
+      </map>
+    </option>
+  </component>
+  <component name="VcsManagerConfiguration">
+    <MESSAGE value="프론트 부분 마무리 수정" />
+    <option name="LAST_COMMIT_MESSAGE" value="프론트 부분 마무리 수정" />
   </component>
 </project>

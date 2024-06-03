@@ -112,7 +112,7 @@ async function process(data) { // 데이터 처리 함수
     if (window.location.pathname == "/first-step") { // 현재 파일이 "first-step.html"인 경우(주소로 변경)
       sessionStorage.setItem("highNote", note); // 세션 스토리지에 기준 음표 저장(됨)
       let text = document.createElement("p"); // 새 p 요소 생성
-      let node = document.createTextNode("Your high note is " + note + "."); // 텍스트 노드 생성
+      let node = document.createTextNode("너의 최고 음은 " + note + "입니다."); // 텍스트 노드 생성
       text.append(node); // 텍스트 노드 추가
       body.append(text); // body에 요소 추가
 
@@ -123,7 +123,7 @@ async function process(data) { // 데이터 처리 함수
     } else { // 2페이지
       sessionStorage.setItem("lowNote", note); // 세션 스토리지에 기준 음표 저장(됨)
       let text = document.createElement("p"); // 새 p 요소 생성
-      let node = document.createTextNode("Your low note is " + note + "."); // 텍스트 노드 생성
+      let node = document.createTextNode("너의 최저 음은 " + note + "입니다."); // 텍스트 노드 생성
       text.append(node); // 텍스트 노드 추가
       body.append(text); // body에 요소 추가
 
