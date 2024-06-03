@@ -3,14 +3,32 @@
 <head>
     <link rel="stylesheet" th:href="@{/css/style.css}"/>
     <title>Second Step</title>
+    <style>
+        body {
+            display: flex;
+            flex-direction: column;
+            align-items: center;
+            justify-content: center;
+            height: 100vh;
+            margin: 0;
+            font-family: Arial, sans-serif;
+        }
+        canvas {
+            border: 1px solid black;
+        }
+    </style>
 </head>
-<h2>First Step: 최저음</h2>
 <body>
-<p>최대한 낮은음을 불러 주십시오</p>
+<h2>Second Step: 최저 음</h2>
+<p>자신이 부를 수 있는 최대한 낮은 음을 불러주세요.</p>
 <button id="recordbutton">Record</button>
+<br>
+<br>
+<canvas id="canvas" width="800" height="400"></canvas>
 <button id="play">Play Note</button>
+<script th:src="@{/js/yin.js}" type="text/javascript"></script>
+<script th:src="@{/js/audio-processor.js}" type="text/javascript"></script>
+<script th:src="@{/js/renderer.js}" type="text/javascript"></script>
+<script th:src="@{/js/script.js}" type="text/javascript"></script>
 </body>
-<script th:src="@{/js/yin.js}"></script>
-<script th:src="@{/js/audio-processor.js}"></script>
-<script th:src="@{/js/renderer.js}"></script>
 </html>

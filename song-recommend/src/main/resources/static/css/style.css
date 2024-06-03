@@ -1,15 +1,15 @@
 body {
   font-family: "Gill Sans", sans-serif;
-  background-color: #7112FF;
+  background-color: #FFFFFF;  /* 배경 */
   text-align: center;
-  color: #C7C7C7;
+  color: #000000;
 }
 h1 {
   margin-top: 100px;
   font-size: 50px;
 }
 h2 {
-  margin-top: 75px;
+  margin-top: 40px;
   font-size: 40px;
 }
 #determine {
@@ -22,12 +22,12 @@ button {
   font-family: "Gill Sans", sans-serif;
   font-size: 25px;
   padding: 15px 30px;
-  background-color: #17C2FE;
-  box-shadow: 0 7px #999;
+  background-color: #00D344;
   border-radius: 35%;
-  color: #363636;
+  color: #000000;
 }
-button:hover {
+
+/*button:hover {
   background-color: #14A6D9;
 }
 button:active {
@@ -37,9 +37,9 @@ button:active {
 }
 button:disabled {
   background-color: #1088B3;
-}
+}*/
 li {
-  text-align: left; 
+  text-align: left;
   font-size: 20px;
 }
 ol {
@@ -56,19 +56,22 @@ ul  {
   border-radius: 50px;
   margin-left: 100px;
   margin-right: 100px;
-  background-color: #78BF81;
-  color: #5C5C5C;
+  background-color: #00D344;
+  color: #000000;
 }
 td {
   height: 30px;
 }
 th {
-  background-color: #17C2FE;
+  background-color: #00D344;
   height: 50px;
-  color: #363636; 
+  color: #000000;
 }
 .divider {
   width: 5px;
   height: auto;
   display: inline-block;
+}
+#play {
+  display: none;
 }
