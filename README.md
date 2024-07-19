@@ -26,4 +26,4 @@ THE SOFTWARE IS PROVIDED "AS IS", WITHOUT WARRANTY OF ANY KIND, EXPRESS OR IMPLI
 다음의 깃허브 코드를 활용해 제작 : 
 https://github.com/bychen9/vocal-range-detector
 
-음 탐지 시간 수정, 유사도 측정 코드 추가, 데이터베이스 연동 후 노래 출력 기능 추가, 시각화 그래프 구, 프론트엔드 수정
+음 탐지 시간 수정, 유사도 측정 코드 추가, 데이터베이스 연동 후 노래 출력 기능 추가, 시각화 그래프 구현, 프론트엔드 수정
